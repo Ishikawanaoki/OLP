@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OpticalLensProcessing.Funcs.BaseFunc">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEgAAQAAABAAAAAAQAAAIEAAAAAgAAAAIAAACEACASA=</HashCode>
+      <FileName>Func.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OpticalLensProcessing.Funcs.FuncList">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQEAgAAAABAAIAAAAQAEAEAA=</HashCode>
+      <FileName>Func.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpticalLensProcessing.Funcs.FuncH27List">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="OpticalLensProcessing.Funcs.FuncH27List.FuncH27Ver1" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Func.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="OpticalLensProcessing.Funcs.FuncH27List.FuncH27Ver2" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Func.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Func.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpticalLensProcessing.Funcs.FuncH25List" Collapsed="true">
+    <Position X="6.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Func.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpticalLensProcessing.Funcs.FuncH24List" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="OpticalLensProcessing.Funcs.FuncH24List.FuncH24Ver1" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Func.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="OpticalLensProcessing.Funcs.FuncH24List.FuncH24Ver2" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Func.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <InheritanceLine Type="OpticalLensProcessing.Funcs.FuncList" FixedFromPoint="true">
+      <Path>
+        <Point X="6" Y="0.875" />
+        <Point X="6.75" Y="0.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Func.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="OpticalLensProcessing.Funcs.IFunc">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEgAAQAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAACASA=</HashCode>
+      <FileName>Func.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Yu Gothic UI" Size="9" />
+</ClassDiagram>
