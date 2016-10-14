@@ -54,9 +54,6 @@ namespace OpticalLensProcessing
                 private set;
                 get;
             }
-            /// <summary>
-            /// セット呼び可能
-            /// </summary>
             public double ThetaToStep
             {
                 set { step = (int)value; thetaToStep = value > 1 ? PI / value : 0; }
@@ -83,10 +80,6 @@ namespace OpticalLensProcessing
             {
                 return "a = " + aLength + ", b = " + bLength + "\nstepby : " + step;
             }
-            /// <summary>
-            /// 楕円の動径
-            /// </summary>
-            /// <returns>楕円の動径</returns>
             public virtual double getX(double theta_R)
             {
                 return BaseF.getX(aLength, bLength, theta_R);
@@ -109,18 +102,12 @@ namespace OpticalLensProcessing
                 double theta0 = step_0 * thetaToStep;
                 return get1stArg(thetaR, theta0) - get2ndArg(thetaR);
             }
-            /// <summary>
-            /// return L1 on 27H version
-            /// </summary>
             public virtual double get1stArg(double theta_R, double theta_0)
             {
                 return getX(theta_R)
                     * Sin(theta_R)
                     * Tan(PI / 2 - theta_R + get_b(theta_R - theta_0));
             }
-            /// <summary>
-            /// return S1 on 27H version
-            /// </summary>
             public virtual double get2ndArg(double step_R)
             {
                 return getX(step_R)
@@ -270,10 +257,6 @@ namespace OpticalLensProcessing
         }
         class FuncLList : FuncList
         {
-            /// <summary>
-            /// 内包する任意の子孫の状態を取得、
-            /// </summary>
-            /// <returns></returns>
             public override string GetStatus()
             {
                 string str = base.GetStatus();
@@ -324,21 +307,12 @@ namespace OpticalLensProcessing
                 public FuncH27Ver2(double a, double b) : base(a, b)
                 {
                 }
-                /// <summary>
-                /// return S2 on 27H version
-                /// 3rd arg : theta_R => PI - theta_R
-                /// </summary>
                 public override double get1stArg(double theta_R, double theta_0)
                 {
                     return base.get1stArg(theta_R, theta_0);
                 }
-                /// <summary>
-                /// return D2 on 27H version
-                /// 引き算を足し算にする。culc()は同一
-                /// </summary>
                 public override double get2ndArg(double theta_R)
                 {
-                    // 0 < step_R < step=180
                     return base.get2ndArg(PI - theta_R) * (-1);
                 }
             }
@@ -423,18 +397,10 @@ namespace OpticalLensProcessing
             }
             class FuncH24Ver1 : BaseFunc
             {
-                /// <summary>
-                /// return L1
-                /// a = b = 1 anytime
-                /// </summary>
                 public override double get1stArg(double theta_R, double theta_0)
                 {
                     return Sin(theta_R) * Tan(PI / 2 - theta_R * step + get_b(theta_R -  theta_0));
                 }
-                /// <summary>
-                /// return S1
-                /// a = b = 1 anytime
-                /// </summary>
                 public override double get2ndArg(double theta_R)
                 {
                     return Cos(theta_R);
@@ -442,18 +408,10 @@ namespace OpticalLensProcessing
             }
             class FuncH24Ver2 : FuncH24Ver1
             {
-                /// <summary>
-                /// return D2
-                /// a = b = 1 anytime
-                /// </summary>
                 public override double get1stArg(double theta_R, double theta_0)
                 {
                     return base.get1stArg(theta_R, theta_0);
                 }
-                /// <summary>
-                /// return S2
-                /// a = b = 1 anytime
-                /// </summary>
                 public override double get2ndArg(double theta_R)
                 {
                     return base.get2ndArg(PI - theta_R) * (-1);
